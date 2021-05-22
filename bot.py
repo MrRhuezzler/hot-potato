@@ -1,5 +1,6 @@
 import os
 
+import discord
 from discord.ext import commands
 from discord.ext.commands.core import command
 
@@ -10,6 +11,7 @@ slash = SlashCommand(client, sync_commands=True)
 
 @client.event
 async def on_ready():
+    await client.change_presence(status=discord.Status.idle, activity=discord.Activity(type=discord.ActivityType.listening, name=";help"))
     print("Ready!")
 
 print("--- Loading Cogs ---")
