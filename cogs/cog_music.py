@@ -227,7 +227,7 @@ class Music(commands.Cog, WavelinkMixin):
                 "port" : int(os.environ.get("LAVALINK_PORT", 2333)),
                 "rest_uri" : os.environ.get("LAVALINK_URI", "http://127.0.0.1:2333"),
                 "password" : os.environ.get("LAVALINK_PASS", "youshallnotpass"),
-                "region" : os.environ.get("LAVALINK_HOST", "us_central")
+                "region" : os.environ.get("LAVALINK_REG", "us_central")
             }
         ]
 
