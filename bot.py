@@ -13,12 +13,14 @@ async def on_ready():
     print("Ready!")
 
 print("--- Loading Cogs ---")
-for _, _, files in os.walk('cogs'):
+for _, _, files in os.walk('cogs/'):
     for file in files:
-        file_name, ext = os.path.split(file)
-        if file_name.startswith('cog_') and ext in '.py':
+        file_name, ext = os.path.splitext(file)
+        if file_name.startswith('cog'):
             print(f"{file}")
             client.load_extension(f'cogs.{file_name}')
+
+    break
 
 print("--- Done Loading Cogs ---")
 

@@ -5,7 +5,7 @@ from discord.ext.commands.core import command
 from discord_slash import cog_ext, SlashContext
 from discord_slash.utils.manage_commands import create_option
 
-from pomodoroTimer import PomodoroTimer
+from .pomodoroTimer import PomodoroTimer
 
 async def createSession(ctx : SlashContext, pt : int, bt : int):
     if not PomodoroTimer.get_session(ctx.author.id):
